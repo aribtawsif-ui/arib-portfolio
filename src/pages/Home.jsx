@@ -188,7 +188,7 @@ export default function Home() {
       {/* ───────── Featured project: The Panenka ───────── */}
       <section className="section">
         <div className="container-page">
-          <div className="on-dark grid overflow-hidden rounded-sm bg-forest-900 text-cream-100 shadow-lift lg:grid-cols-2">
+          <div className="on-dark grid overflow-hidden rounded-sm bg-forest-900 text-cream-100 shadow-lift">
             <div className="flex flex-col justify-center p-8 sm:p-12">
               <h2 className="font-sans text-sm font-medium text-gold-300">Featured project</h2>
               <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
@@ -217,15 +217,6 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <ImageSlot
-              name="panenka-products-1"
-              label="The Panenka product photograph"
-              alt="A product from The Panenka"
-              fileHint="panenka-products-1.jpg"
-              className="min-h-[20rem] w-full"
-              rounded="rounded-none"
-              tone="dark"
-            />
           </div>
         </div>
       </section>

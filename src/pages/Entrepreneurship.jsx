@@ -1,17 +1,14 @@
-import { Globe, Facebook, Instagram } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 import { panenka } from '../data/content.js';
 import { siteConfig } from '../data/siteConfig.js';
 import { isSet } from '../lib/links.js';
 import { PageSeo } from '../components/ui/Seo.jsx';
 import Button from '../components/ui/Button.jsx';
-import Gallery from '../components/ui/Gallery.jsx';
 import ImageSlot from '../components/ui/ImageSlot.jsx';
 import PageHeader from '../components/layout/PageHeader.jsx';
 import PageNav from '../components/layout/PageNav.jsx';
 
 const panenkaLinks = [
-  { key: 'website', label: 'Visit the website', Icon: Globe },
-  { key: 'instagram', label: 'Instagram', Icon: Instagram },
   { key: 'facebook', label: 'Facebook', Icon: Facebook },
 ];
 
@@ -78,10 +75,11 @@ export default function Entrepreneurship() {
           <div className="lg:col-span-5">
             <ImageSlot
               name="panenka-hero"
-              label="The Panenka featured product or campaign photograph"
-              alt="The Panenka featured product"
-              fileHint="panenka-hero.jpg"
-              aspect="aspect-[4/5]"
+              label="The Panenka cover"
+              alt="The Panenka Sports cover featuring a football match and the slogan Where every football story scores"
+              fileHint="panenka-hero.png"
+              aspect="aspect-[2048/1154]"
+              fit="object-contain"
               className="w-full shadow-lift"
             />
           </div>
@@ -100,36 +98,6 @@ export default function Entrepreneurship() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Product photography */}
-      <section className="section">
-        <div className="container-page">
-          <h2 className="h2-display">Product photography</h2>
-          <p className="prose-measure mt-3 text-muted">Photographs of The Panenka's jerseys and sportswear.</p>
-          <Gallery
-            prefix="panenka-products"
-            label="The Panenka product photography"
-            minSlots={3}
-            className="mt-8"
-          />
-        </div>
-      </section>
-
-      {/* Jersey collections */}
-      <section className="border-t border-forest-900/10 bg-cream-50 section">
-        <div className="container-page">
-          <h2 className="h2-display">Jersey collections</h2>
-          <p className="prose-measure mt-3 text-muted">
-            Space for the collections and drops you want to feature.
-          </p>
-          <Gallery
-            prefix="panenka-collection"
-            label="The Panenka jersey collection"
-            minSlots={3}
-            className="mt-8"
-          />
         </div>
       </section>
 
