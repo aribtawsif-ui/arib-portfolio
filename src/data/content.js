@@ -213,15 +213,13 @@ export const education = [
   {
     id: 'bmarpc',
     institution: 'Birshreshtha Munshi Abdur Rouf Public College',
-    qualification: null, // add the qualification name when you are ready
-    description: 'A stage of my academic journey before university.',
+    level: 'College',
     current: false,
   },
   {
     id: 'wlfsc',
     institution: 'Willes Little Flower School & College',
-    qualification: null, // add the qualification name when you are ready
-    description: 'A stage of my academic journey before university.',
+    level: 'School',
     current: false,
   },
 ];

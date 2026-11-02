@@ -1,6 +1,5 @@
 import { GraduationCap, School } from 'lucide-react';
 import { education } from '../data/content.js';
-import { siteConfig } from '../data/siteConfig.js';
 import { PageSeo } from '../components/ui/Seo.jsx';
 import PageHeader from '../components/layout/PageHeader.jsx';
 import PageNav from '../components/layout/PageNav.jsx';
@@ -49,17 +48,13 @@ export default function Education() {
                       {entry.institution}
                     </h2>
 
-                    {entry.qualification ? (
-                      <p className="mt-2 text-lg text-gold-700">{entry.qualification}</p>
-                    ) : (
-                      siteConfig.showPlaceholderLabels && (
-                        <p className="mt-2 inline-block rounded-sm border border-dashed border-gold-600/60 px-3 py-1 text-sm italic text-muted">
-                          Placeholder: add your qualification name in src/data/content.js
-                        </p>
-                      )
+                    {(entry.level || entry.qualification) && (
+                      <p className="mt-2 text-lg text-gold-700">{entry.level || entry.qualification}</p>
                     )}
 
-                    <p className="prose-measure mt-4 leading-relaxed text-muted">{entry.description}</p>
+                    {entry.description && (
+                      <p className="prose-measure mt-4 leading-relaxed text-muted">{entry.description}</p>
+                    )}
                   </article>
                 </li>
               );
