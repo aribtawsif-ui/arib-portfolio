@@ -57,11 +57,6 @@ function renderPage(template, route, { isHome }) {
     'canonical link',
   );
 
-  // Netlify only needs to read the contact form once (from the home page copy).
-  if (!isHome) {
-    html = html.replace(/<!-- netlify-form:start -->[\s\S]*?<!-- netlify-form:end -->\s*/, '');
-  }
-
   // Structured data describing the site owner, on the home page only.
   if (isHome) {
     const sameAs = Object.values(siteConfig.social)

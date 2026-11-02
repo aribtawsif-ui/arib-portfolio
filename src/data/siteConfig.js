@@ -36,24 +36,24 @@ export const siteConfig = {
 
   // ── Contact details ─────────────────────────────────────────────────────────
   contact: {
-    email: '', // e.g. 'name@example.com'
-    phone: '', // e.g. '+8801XXXXXXXXX'
-    whatsapp: '', // international format, digits only or with +, e.g. '8801XXXXXXXXX'
+    email: 'aribtawsif@gmail.com',
+    phone: '+8801410029656',
+    whatsapp: '8801531729656',
     whatsappMessage: 'Hello Arib, I found your portfolio website and would like to connect.',
   },
 
   // ── Social profiles (full URLs, e.g. 'https://www.linkedin.com/in/your-name') ──
   social: {
-    linkedin: '',
-    facebook: '',
-    instagram: '',
+    linkedin: 'https://www.linkedin.com/in/arib-tawsif-hassan-6777022a5/',
+    facebook: 'https://www.facebook.com/arib.tawsif.07',
+    instagram: 'https://www.instagram.com/7aribt_?xtok=d2t3NW11MzRwcXR0',
   },
 
   // ── The Panenka links ───────────────────────────────────────────────────────
   panenka: {
     website: '',
     instagram: '',
-    facebook: '',
+    facebook: 'https://www.facebook.com/thepanenkaOfficial',
   },
 
   // ── Contact form ────────────────────────────────────────────────────────────
