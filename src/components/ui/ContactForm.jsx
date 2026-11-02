@@ -40,7 +40,7 @@ export default function ContactForm() {
         });
       } else {
         const body = new URLSearchParams({ 'form-name': netlifyFormName, 'bot-field': '', ...values });
-        response = await fetch('/', {
+        response = await fetch('/__forms.html', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: body.toString(),
@@ -86,10 +86,13 @@ export default function ContactForm() {
     <form
       name={siteConfig.form.netlifyFormName}
       method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className="space-y-5"
       aria-describedby={status === 'error' ? 'form-error' : undefined}
     >
+      <input type="hidden" name="form-name" value={siteConfig.form.netlifyFormName} />
       {/* Honeypot field for spam bots (hidden from people and assistive technology) */}
       <div className="hidden" aria-hidden="true">
         <label>
