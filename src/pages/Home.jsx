@@ -278,7 +278,7 @@ export default function Home() {
             </div>
           </div>
           <ul className="divide-y divide-forest-900/15 border-y border-forest-900/15 lg:col-span-7">
-            {initiatives.map(({ slug, title, subtitle, summary, Icon }) => (
+            {initiatives.map(({ slug, title, subtitle, Icon }) => (
               <li key={slug}>
                 <Link
                   to={`/community-impact#${slug}`}
@@ -288,10 +288,6 @@ export default function Home() {
                   <span>
                     <span className="block font-display text-xl tracking-tight sm:text-2xl" lang={subtitle ? 'bn' : undefined}>
                       {title}
-                    </span>
-                    <span className="block text-sm text-muted">
-                      {subtitle ? `${subtitle}. ` : ''}
-                      {summary}
                     </span>
                   </span>
                 </Link>
