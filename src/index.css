@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream-100 font-sans text-forest-900 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  /* Keyboard focus is always visible and uses the gold accent. */
+  :focus-visible {
+    outline: 2px solid theme('colors.gold.500');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: theme('colors.gold.300');
+  }
+
+  ::selection {
+    background: theme('colors.gold.300');
+    color: theme('colors.forest.950');
+  }
+
+  /* Honour the visitor's "reduce motion" setting everywhere. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Shared page width and gutters. */
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10;
+  }
+
+  /* Vertical rhythm between page sections. */
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Readable line length for long text. */
+  .prose-measure {
+    @apply max-w-[62ch];
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-sm bg-gold-300 px-4 py-2 text-sm font-semibold text-forest-950 shadow-lift transition-transform focus:translate-y-0;
+  }
+
+  .h2-display {
+    @apply text-3xl font-normal leading-tight tracking-tight sm:text-4xl;
+  }
+}
